@@ -29,3 +29,27 @@ pip install -r requirements.txt
   mkdir ./log/cora/${sss}
   python ./train_gcn.py --verbose True --log True --log_file './log/cora/'${sss} --times 10 --dataset 'Cora' --hidden '512' --wt 100 --wl 2 --tau 0.3 --ns 0.5 --lr 0.0005 --epochs 400 --wd 1e-3
   ```
+* CiteSeer
+  ```
+  sss="$(date +%Y-%m-%d-%H-%s)/"
+  mkdir ./log
+  mkdir ./log/citeseer
+  mkdir ./log/citeseer/${sss}
+  python ./train_gcn.py --verbose True --log False --log_file './log/citeseer/'${sss} --times 10 --dataset 'Citeseer' --hidden '1024,512' --wt 100 --wl 3 --tau 0.9 --ns 0.5 --lr 0.0001 --epochs 400 --wd 5e-4
+  ```
+* Amazon-photo
+  ```
+  sss="$(date +%Y-%m-%d-%H-%s)/"
+  mkdir ./log
+  mkdir ./log/photo
+  mkdir ./log/photo/${sss}
+  python ./train_gcn.py --verbose True --log True --log_file './log/photo/'${sss} --times 10 --dataset 'Photo' --hidden '512' --wt 100 --wl 3 --tau 0.5 --ns 0.5 --lr 0.0005 --epochs 400 --wd 1e-3
+  ```
+* Amazon-computers
+  ```
+  sss="$(date +%Y-%m-%d-%H-%s)/"
+  mkdir ./log
+  mkdir ./log/computers
+  mkdir ./log/computers/${sss}
+  python ./train_gcn.py --verbose True --log True --log_file './log/computers/'${sss} --times 10 --dataset 'Computers' --hidden '1024,512' --wt 100 --wl 3 --tau 0.9 --ns 0.1 --lr 0.0005 --epochs 400 --wd 1e-3
+  ```
