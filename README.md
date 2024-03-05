@@ -22,10 +22,10 @@ pip install -r requirements.txt
 # Graph clustering experiments
 
 * Cora
-  '''
+  ```
   sss="$(date +%Y-%m-%d-%H-%s)/"
   mkdir ./log
   mkdir ./log/cora
   mkdir ./log/cora/${sss}
   python ./train_gcn.py --verbose True --log True --log_file './log/cora/'${sss} --times 10 --dataset 'Cora' --hidden '512' --wt 100 --wl 2 --tau 0.3 --ns 0.5 --lr 0.0005 --epochs 400 --wd 1e-3
-  '''
+  ```
